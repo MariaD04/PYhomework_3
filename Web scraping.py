@@ -53,7 +53,6 @@ for link in links_list:
     company = bs_company.find('span', class_='company-header-title-name').text
     company_list.append(company)
 
-
 for link in links_list:
     city_link = requests.get(link, headers=get_headers()).text 
     bs_city = BeautifulSoup(city_link, features='lxml')
